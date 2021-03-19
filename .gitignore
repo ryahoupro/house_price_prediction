@@ -2,6 +2,8 @@
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
 
+.ipynb_checkpoint/
+
 # Notebook Checkpoints
 .ipynb_checkpoints/
 
