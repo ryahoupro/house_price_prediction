@@ -1,10 +1,12 @@
 import pandas as pd
 import joblib
-
-from regression_model.config import config, logging_config
-from regression_model import __version__ as version
-
 import logging
+
+import sys
+sys.path.append("..")
+
+from regression_model.config import config
+from regression_model import __version__ as version
 
 logger = logging.getLogger(__name__)
 
@@ -13,6 +15,7 @@ def load_dataset(filename):
     """load the dataset into a pandas dataframe"""
     data = pd.read_csv(config.DATASET_DIR / filename)
     return data
+
 
 def save_pipeline(pipeline) -> None :
     """saves the trained model in dir trained_models"""
@@ -27,15 +30,13 @@ def save_pipeline(pipeline) -> None :
 
     logger.info("file {} saved".format(filename))
 
-
     return None
+
 
 def load_pipeline(filename):
     """loads the model from filename"""
 
-    print(filename)
     path = config.TRAINED_MODEL_DIR / filename
-    print("path", path)
     my_pipeline = joblib.load(path)
 
     return my_pipeline
