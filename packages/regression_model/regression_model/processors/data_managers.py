@@ -8,7 +8,6 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-print("something")
 
 def load_dataset(filename):
     """load the dataset into a pandas dataframe"""
