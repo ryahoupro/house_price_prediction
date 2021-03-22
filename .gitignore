@@ -1,14 +1,17 @@
 .DS_Store
+
+# Jupyter Notebook
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
-
 .ipynb_checkpoint/
-
-# Notebook Checkpoints
 .ipynb_checkpoints/
 
-# User-specific stuff:
+# User-specific stuff
 .idea
 
 
+# Byte-compiled / optimized / DLL files
 __pycache__/
+*.py[cod]
+*$py.class
+
